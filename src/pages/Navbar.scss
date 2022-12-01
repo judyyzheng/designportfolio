@@ -1,0 +1,27 @@
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88) 0%, #F1F1F1 100%);
+$dark: #1E1E1E;
+
+.navigation {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    column-gap: 3vh;
+    padding: 5vh;
+}
+
+.navigation > * > button {
+    font-family: 'Inter';
+    font-weight: 50;
+    font-size: 2.10vh;
+    line-height: 3vh;
+    text-align: center;
+    text-transform: lowercase;
+    border: 0px;
+    background: none;
+    color: $gray;
+
+    &:hover {
+        text-decoration-line: underline;
+    }
+}

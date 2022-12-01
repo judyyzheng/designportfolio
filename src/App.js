@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import GirlOnTrain from './assets/projects/girltrain.png';
+
+import Button from './components/Button/Button.tsx';
+import Card from './components/Card/Card.tsx';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button label="Hello world!"/>
+      <Card title="Hello world!" image={GirlOnTrain} desciption={['this is line #1', 'this is line #2', 'this is line #3']}/>
     </div>
   );
 }

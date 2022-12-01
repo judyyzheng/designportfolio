@@ -1,0 +1,23 @@
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88) 0%, #F1F1F1 100%);
+$dark: #1E1E1E;
+$blue: radial-gradient(99% 100% at 20% 100%, #0900bba2 0%, #006aff 100%);
+
+.label {
+    background: $blue;
+    border-radius: 12vh;
+    width: fit-content;
+    // width: 15vh;
+
+    // text
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.5vh;
+    line-height: 4vh;
+    text-align: center;
+    text-transform: lowercase;
+
+    padding: 1vh 10vh 1vh 10vh;
+
+    color: white;
+}

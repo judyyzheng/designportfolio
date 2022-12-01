@@ -1,0 +1,53 @@
+
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88) 0%, #F1F1F1 100%);
+$dark: #1E1E1E;
+$light: #d2d2d2;
+
+.checklist {
+/*Div parent need this*/
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.checklist-item {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 16px;
+}
+
+label {
+display: flex;
+margin: auto;
+width: 2vh;
+height: 2vh;
+cursor: pointer;
+}
+
+input {
+position: absolute;
+transform: scale(0);
+}
+
+input:checked ~ .checkbox {
+    transform: rotate(45deg);
+    width: 2vh;
+    margin: -5px 0px 0 8px;
+    border-color: $dark;
+    border-width: 1px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-radius: 0;
+}
+
+.checkbox {
+display: block;
+width: inherit;
+height: inherit;
+border: 1px solid $dark;
+border-radius: 4px;
+transition: all 0.2s cubic-bezier(0, 0.01, 0.23, 0.8);
+}
+

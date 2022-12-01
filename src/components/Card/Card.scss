@@ -1,0 +1,91 @@
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88) 0%, #F1F1F1 100%);
+$dark: #1E1E1E;
+$duration: .20;
+$easing: ease-in-out;
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    height: 11vh;
+    width: 19vh;
+}
+
+.text-background {
+    position: relative;
+    background: $gray;
+    backdrop-filter: blur(2px);
+    border-radius: 2.4vh;
+    height: 26vh;
+    width: 26vh;
+
+    &:hover {
+        background: $dark;
+        backdrop-filter: blur(2px);
+        border-radius: 20px 100px 100px 20px;
+        width: 42vh;
+    }
+
+    &:hover .text {
+        color: white;
+        left: 35%;
+    }
+
+    &:hover img {
+        visibility: visible;
+    }
+
+    transition: $duration + s $easing;
+}
+
+.text-background > img {
+    position: absolute;
+    top: 50%; left: 70%;
+    visibility: hidden;
+}
+
+.background {
+    position: relative;
+    border-radius: 2.4vh;
+    height: 26vh;
+    width: 47vh;
+    background-size: cover;
+    overflow: hidden;
+    border: 0px;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+}
+
+.line {
+    border: 1px solid #000000;
+    transform: rotate(-90deg);
+    height: 0px;
+    width: 13vh;
+}
+
+.timeline-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2vh;
+    line-height: 15px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: lowercase;
+
+    color: #000000;
+}

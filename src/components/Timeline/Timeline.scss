@@ -1,0 +1,92 @@
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88) 0%, #F1F1F1 100%);
+$dark: #1E1E1E;
+$light: #4f6ad6;
+$dark: #5c5c5c;
+
+table {
+    display: block;
+    position: relative;
+    margin-top: 50px;
+    color: black;
+    border-collapse: collapse;
+    font-family: Inter;
+    th,
+    td{
+        height: 9vh;
+        overflow: hidden;
+        font-size: 12px;
+        padding: 5px;
+
+        text-overflow: ellipsis;
+    }
+    th{
+        padding-top: 45px;
+    }
+    tbody {
+        position: relative;
+        overflow-x: auto;
+        width: 100%;
+        tr{
+            display: table-cell;
+            td{
+                display: block;
+                text-align: left;
+                border-right: 1px solid #E6E4E4;
+                white-space: wrap;
+                color: white;
+                height: 6vh;
+                padding: 10px 20px;
+                text-transform: lowercase;
+                font-size: 1.5vh;
+                letter-spacing: 1px;
+                &:first-child{
+                    border-top: 1px solid transparent;
+                    white-space: wrap;
+                    height: 6vh;
+                    padding: 10px 20px;
+                    color: white;
+                    text-transform: lowercase;
+                    font-size: 2vh;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+
+table tbody tr:nth-child(n) td {
+    @for $i from 1 through 5 {   
+
+        &:nth-child(#{$i}) {
+            @keyframes onHoverAnimation {
+                0% {
+                    opacity: 50%;
+                }
+                100% {
+                }
+            }  
+
+            background-color: lighten( $light, calc(50% * ($i / 10)));
+            border-bottom: 1px solid $gray;
+            border-right: 1px solid lighten( $light, calc(20% * $i));
+        }
+        &:nth-child(even) {
+            animation-name: onHoverAnimation;
+            animation-duration: 1s; /* same as transition duration */
+            animation-timing-function: linear; /* kind of same as transition timing */
+            animation-delay: 0ms; /* same as transition delay */
+            animation-iteration-count: infinite; /* set to 2 to make it run twice, or Infinite to run forever!*/
+            animation-direction: alternate; /* can be set to "alternate" to run animation, then run it backwards.*/
+        }
+
+        &:nth-child(2n+3) {
+            animation-name: onHoverAnimation;
+            animation-duration: 1s; /* same as transition duration */
+            animation-timing-function: linear; /* kind of same as transition timing */
+            animation-delay: 10ms; /* same as transition delay */
+            animation-iteration-count: infinite; /* set to 2 to make it run twice, or Infinite to run forever!*/
+            animation-direction: alternate; /* can be set to "alternate" to run animation, then run it backwards.*/
+        }
+    }
+}

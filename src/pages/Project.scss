@@ -1,0 +1,313 @@
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.956) 0%, #f1f1f174 100%);
+$dark: #1E1E1E;
+$purple: linear-gradient(180deg, #000000 0%, #040028c5 100%);
+$blue: linear-gradient(180deg, #440649 0%, #006aff 100%);
+
+// Common components
+.section {
+    padding: 5vh 15vh 5vh 15vh;
+    background-color: white
+}
+
+.gray-bg {
+    background: $dark;
+    backdrop-filter: blur(2px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 4vh;
+    padding: 5vh;
+}
+
+.gray-gradient-bg {
+    background: $gray;
+    backdrop-filter: blur(20px) grayscale(20%);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 80px 100px 100px 100px;
+    padding: 5vh;
+}
+
+.white-bg {
+    background: white;
+    backdrop-filter: blur(2px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 80px 100px 100px 100px;
+    padding: 5vh;  
+}
+
+.p1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2vh;
+    line-height: 2.4vh;
+
+    color: white;
+    padding: 2vh;
+}
+
+.matchbox-logo {
+    padding: 3vh;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10vh;
+    text-align: left;
+
+    background: $blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// white header
+.p2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6vh;
+    color: white;
+    backdrop-filter: blur(2px);
+    text-align: center;
+}
+
+// purple gradient header
+.p3 {
+    padding-bottom: 10vh;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8vh;
+    text-align: left;
+
+    background: $blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// regular black paragraph
+.p4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vh;
+    line-height: 3vh;
+
+    color: $dark;
+    padding: 2vh;
+    ul {
+        text-align: left;
+        line-height: 3vh;
+    }
+
+    ul li {
+        list-style-type: none;
+        counter-increment: item;
+    }
+      
+    ul li:before {
+        content: counter(item);
+        margin-right: 5vh;
+        font-size: 50%;
+        background-color: $dark;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 3px 8px;
+        width: 2vh;
+        border-radius: 3vh;
+    }
+}
+
+.p5 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vh;
+    line-height: 4.5vh;
+    text-transform: lowercase;
+    
+    color: $dark;
+}
+
+// white header
+.p5-white {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.5vh;
+    line-height: 4.5vh;
+    text-transform: lowercase;
+
+    color: white;
+}
+
+.horizontal-line {
+    position: absolute;
+    border: 1px solid #000000;
+    height: 0px;
+    width: 23vh;
+}
+
+// Background
+
+.background-section-img {
+    background:
+            url("../assets/projects/girltrain.png");
+    overflow: hidden;
+}
+
+// Problem
+.fixedbgd {
+    position: absolute;
+    background: url("../assets/projects/SocialCurrant/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 500vh;
+
+    z-index: -1;
+}
+
+.fixed {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.8) 0%, rgba(30, 30, 30, 0.48) 100%), 
+            url("../assets/projects/SocialCurrant/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: hue-rotate(20deg) grayscale(100%);
+    width: 100%;
+    height: 60vh;
+
+    z-index: -1;
+}
+
+// Planning
+// Research
+.pain-point-section {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15vh;
+
+    .pain-points{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        align-self: center;
+    }
+}
+
+.three-img {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vh;
+    width: 100%;
+    padding: 5vh 0 5vh 0;
+    div {
+        overflow: hidden;
+        width:50%;  
+        height:70vh;
+    }
+
+    div > div {
+        padding-top: 10vh;
+        overflow: hidden;
+        width:100%;  
+        height:25vh;
+    }
+    img {
+        opacity: 85%;
+        width:100%;
+    }
+    img:hover {
+        opacity: 100%;
+        width:110%;
+        height:fit-content;
+    }
+}
+
+.fireside-section {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5vh;
+}
+// Design
+.three-step-animation {
+    animation: lineShift 3s linear 0s infinite;
+    .horizontal-line {
+        transform: translate(0, 2vh);
+    }
+}
+
+@keyframes lineShift {
+    from {
+      transform: translate(0);
+    }
+    to {
+      transform:  translate(70vh);
+    }
+  }
+
+.three-step {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vh;
+    .number-label {
+        margin-right: 37vh;
+        position: relative;
+    }
+}
+
+.two-step {
+    display: flex;
+    flex-direction: row;
+    padding: 5vh;
+    img {
+        width: 40%;
+    }
+}
+
+.design-process {
+    padding-top: 10vh;
+}
+
+.feedbackloop > img {
+    width: 90%;
+    height: auto;
+}
+
+.wireframe {
+    text-align: right;
+}
+
+.prototypes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 4vh;
+    padding: 10vh 0 10vh 0;
+    img {
+        position: relative;
+        height: 50vh;
+        rotate: 1deg;
+    
+        &:hover {
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+}
+
+.fixed2 {
+    position: absolute;
+    background: url("../assets/projects/SocialCurrant/background.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    width: 100%;
+    height: 90vh;
+
+    z-index: -1;
+}
+// Refinement
+// KPI
+// Reflection

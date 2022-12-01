@@ -1,0 +1,55 @@
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88) 0%, #F1F1F1 100%);
+$dark: #1E1E1E;
+
+.quote {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vh;
+}
+
+.bubble {
+    position: relative ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vh;
+    height: 30vh;
+}
+
+.bubble > img {
+    position: absolute;
+}
+
+.quote-text {
+    position: absolute;
+    width: 25vh;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vh;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.quote-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: lowercase;
+    
+    color: #8e8e8e;
+    
+}
+
+.quote-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: lowercase;
+
+    color: #000000;
+
+}
