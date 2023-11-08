@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import Home from './pages/Home';
-import Project from './pages/Project';
+import Project from './pages/matchbox/Project';
+import TradeBookerPage from './pages/tradebooker/TradeBookerPage';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter,  
@@ -16,6 +17,7 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/project" element={<Project />} />
+      <Route path="/tradebooker" element={<TradeBookerPage />} />
     </Routes>
   </BrowserRouter>
 );

@@ -2,8 +2,9 @@ $gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88)
 $dark: #1E1E1E;
 
 .navigation {
-    position: relative;
     display: flex;
+    position: fixed;
+    right: 0;
     justify-content: flex-end;
     flex-direction: row;
     column-gap: 3vh;

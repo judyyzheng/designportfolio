@@ -16,6 +16,20 @@ $easing: ease-in-out;
     flex-direction: column;
     height: 11vh;
     width: 19vh;
+    text-align: left;
+}
+
+.text > .title {
+    font-family: serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.text > * > li {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1vw;
 }
 
 .text-background {

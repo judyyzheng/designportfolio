@@ -4,13 +4,11 @@ import GirlOnTrain from './assets/projects/girltrain.png';
 
 import Button from './components/Button/Button.tsx';
 import Card from './components/Card/Card.tsx';
+import CircleGraph from './components/CircleGraph/CircleGraph.tsx';
 
 function App() {
   return (
-    <div className="App">
-      <Button label="Hello world!"/>
-      <Card title="Hello world!" image={GirlOnTrain} desciption={['this is line #1', 'this is line #2', 'this is line #3']}/>
-    </div>
+    <div className="App"></div>
   );
 }
 

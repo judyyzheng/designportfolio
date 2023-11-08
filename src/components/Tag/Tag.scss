@@ -1,0 +1,30 @@
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88) 0%, #F1F1F1 100%);
+$dark: #1E1E1E;
+
+.tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tags li {
+    float: left; 
+  }
+
+.tag {
+    background: crimson;
+    border-radius: 3px 0 0 3px;
+    color: white;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px 0 13px;
+    position: relative;
+    margin: 0 5px 5px 0;
+    text-decoration: none;
+}
+
+.tag:hover {
+    background-color: crimson;
+    color: white;
+}

@@ -3,29 +3,31 @@ import './Project.scss';
 import { HashLink } from 'react-router-hash-link';
 
 // Components
-import Navbar from './Navbar';
-import Label from '../components/Label/Label.tsx';
-import Timeline from '../components/Timeline/Timeline.tsx';
-import CircleGraph from '../components/CircleGraph/CircleGraph.tsx';
-import Checklist from '../components/Checklist/Checklist.tsx';
-import Quote from '../components/Quote/Quote.tsx';
+import Navbar from '../Navbar';
+import Label from '../../components/Label/Label.tsx';
+import Timeline from '../../components/Timeline/Timeline.tsx';
+import CircleGraph from '../../components/CircleGraph/CircleGraph.tsx';
+import Checklist from '../../components/Checklist/Checklist.tsx';
+import Quote from '../../components/Quote/Quote.tsx';
 
 // Assets
-import Prototype1 from '../assets/projects/SocialCurrant/prototype1.png';
-import Prototype2 from '../assets/projects/SocialCurrant/prototype2.png';
-import Prototype3 from '../assets/projects/SocialCurrant/prototype3.png';
-import Wireframe from '../assets/projects/SocialCurrant/wireframe.png';
-import FeedbackLoop from '../assets/projects/SocialCurrant/feedbackloop.png';
-import SocialCurrantLogo from '../assets/projects/SocialCurrant/socialcurrantlogo.svg';
-import Fire from '../assets/projects/SocialCurrant/fire.svg';
-import Content1 from '../assets/projects/SocialCurrant/content1.png';
-import Content2 from '../assets/projects/SocialCurrant/content2.png';
-import Content3 from '../assets/projects/SocialCurrant/content3.png';
-import Day1 from '../assets/projects/SocialCurrant/day1.jpg';
-import Day2 from '../assets/projects/SocialCurrant/day2.jpg';
-import Day3 from '../assets/projects/SocialCurrant/day3.jpg';
+import Prototype1 from '../../assets/projects/SocialCurrant/prototype1.svg';
+import Prototype2 from '../../assets/projects/SocialCurrant/prototype2.svg';
+import Prototype3 from '../../assets/projects/SocialCurrant/prototype3.svg';
+import Wireframe from '../../assets/projects/SocialCurrant/wireframe.png';
+import FeedbackLoop from '../../assets/projects/SocialCurrant/feedbackloop.png';
+import SocialCurrantLogo from '../../assets/projects/SocialCurrant/socialcurrantlogo.svg';
+import Fire from '../../assets/projects/SocialCurrant/fire.svg';
+import Content1 from '../../assets/projects/SocialCurrant/content1.png';
+import Content2 from '../../assets/projects/SocialCurrant/content2.png';
+import Content3 from '../../assets/projects/SocialCurrant/content3.png';
+import Day1 from '../../assets/projects/SocialCurrant/day1.jpg';
+import Day2 from '../../assets/projects/SocialCurrant/day2.jpg';
+import Day3 from '../../assets/projects/SocialCurrant/day3.jpg';
+import CurrantApp from '../../assets/projects/SocialCurrant/currantapp.png';
+import BrandInfluencer from '../../assets/projects/SocialCurrant/brandinfluencer.svg';
 
-function Home() {
+function Project() {
 
   return (
     <>
@@ -66,32 +68,44 @@ function Home() {
       {/* Background */}
       <div className='fixedbgd'></div>
       <div id='background' className='section' style={{backgroundColor: 'transparent'}}>
-      <div className='p3'>ProdCon2022<br /> partners Social Currant</div>
+      <div className='p5'>prodcon2022</div>
+      <div className='p3'>UW Product Management<br/> and Social Currant</div>
         <div className='gray-gradient-bg'>
           <Label label='Background'/>
-                <div className='p5' style={{paddingTop: '3vh', paddingLeft: '7%', paddingRight: '10%'}}>here's an introduction.</div>
                 <div className='p4' style={{paddingLeft: '10%', paddingRight: '10%'}}>
-                  <p>
-                  This year, UW Product Management hosted a product case competition, 
-                  partnering with Social Currant. 
-                  Social Currant is a youth-powered media agency building a 
-                  platform to connect creators with brands who want to partner 
-                  with them for their advertising campaigns.
-                  </p>
-                  <div className='three-img'>
-                    <div>
-                      < div>
-                          <img src={Day1}></img>
-                        </div>
-                        <p>
-                            Our team proposed the winning solution "matchbox" - an innovative system that is practically implemented with maximum impact
-                            on the negotiation time between brands and influencers.
-                        </p>
-                    </div>
-                    <div><img src={Day2}></img></div>
+                <div className='side-img' style={{paddingLeft: '0'}}>
+                  <div>
+                    <div className='p5'> here's an introduction.</div>
+                    <p>
+                      This year, UW Product Management hosted a product case competition, 
+                      partnering with Social Currant to find the best product proposal that resolves one of their
+                      biggest organizational bottlenecks.
+                    </p>
+                    <p>
+                      Briefly, Social Currant is a youth-powered media agency in their early startup stages, 
+                      building a  patform to connect creators with brands who want to partner 
+                      with them for their advertising campaigns.
+                    </p>
                   </div>
+                  <img src={CurrantApp} style={{height: '60vh', padding: '7vh', width: 'auto'}}></img>
                 </div>
-            <img src={SocialCurrantLogo}></img>
+                  <div className='side-img'>
+                  <img src={Day2} style={{borderRadius: '4vh'}}></img>
+                  <div>
+                      <div className='p5'>Our team proposed the winning solution.</div>
+                      <p>
+                      Our team placed first out of over 110 teams with "Matchbox" - an innovative system that is practically implemented with maximum impact
+                      on the negotiation time between brands and influencers.
+                      </p>
+                        <img src={Day1} style={{borderRadius: '4vh', height: '34vh', width: 'auto'}}></img>
+                  </div>
+                  </div>
+                  <div className='p5'>Keep reading</div>
+                  <p>
+                      to see how we navigated from the problem statement to the final product pitch!
+                  </p>
+                </div>
+            <img src={SocialCurrantLogo} style={{paddingTop: '7vh'}}></img>
         </div>
       </div>
 
@@ -105,14 +119,16 @@ function Home() {
       {/* Planning */}
       <div id='planning' className='section'>
         <Label label='Planning'/>
+        <div className='gray-gradient-bg' >
         <Timeline />
+        </div>
       </div>
 
       {/* Research */}
       <div id='research' className='section' style={{backgroundColor: 'transparent'}}>
         <div className='gray-gradient-bg' >
         <Label label='Research'/>
-          <div className='p5' style={{paddingTop: '3vh', paddingLeft: '7%', paddingRight: '10%'}}>after hours of research, we narrowed our problem space.</div>
+          <div className='p5' style={{paddingTop: '10vh', paddingLeft: '10%', paddingRight: '10%'}}>after hours of research, we narrowed our problem space.</div>
                 <div className='p4' style={{paddingLeft: '10%', paddingRight: '10%'}}>
                   <p>
                   In our research, we pinpointed various areas of shared frustrations and bottlenecks in the campaign agreement process:
@@ -128,36 +144,31 @@ function Home() {
                   
                   <p>
                   Influencers want <b>content standardization</b>. Brands want content standardization.</p>
-                  <div className='three-img'>
-                  <div>
-                    <p>
-                      In order to pin down where the unnecessary overlaps occur, we aimed to uncover the most 
-                      common concerns that both brands and influencers share.
-                      They can be summarized into the following five questions:
-                    </p>
-                    <div style={{height:'30vh', width: '30vh'}}>
-                      <img src={Content1}></img>
-                    </div>
-                      
-                  </div>
-                    <div><img src={Content2}></img>
-                    <p>
-                          <ul>
+
+                  <div className='side-img'>
+                      <p>
+                        In order to pin down where the unnecessary overlaps occur, we aimed to uncover the most 
+                        common concerns that both brands and influencers share.
+                        They can be summarized into the following five questions:
+                        <ul>
                             <li>Who is the audience the campaign should reach?</li>
                             <li>What are the necessary components of the ad?</li>
                             <li>What are the brand guidelines creators must follow?</li>
                             <li>What is the cost?</li>
                             <li>What are the success metrics of the campaign?</li>
                           </ul>
-                        </p>
-                    </div>
-                    <div><img src={Content3}></img></div>
+                      </p>
+                      <img src={BrandInfluencer} style={{width: '70vh'}}></img>
                   </div>
-                  <p> Moreover, brands find it difficult to identify the right
-                  creators to produce a certain outcome. Despite having a strong understanding of
-                  their product, audience, and desired campaign result, brands are inflexible
-                   in giving creators the complete marketing freedom to appeal to their viewers. 
-                  </p>
+
+                  <div className='side-img'>
+                      <img src={Content2}></img>
+                      <p> Moreover, brands find it difficult to identify the right
+                        creators to produce a certain outcome. Despite having a strong understanding of
+                        their product, audience, and desired campaign result, brands are inflexible
+                        in giving creators the complete marketing freedom to appeal to their viewers. 
+                        </p>
+                  </div>
                   <p><b>The Overarching Problem:</b> How do we reduce the negotiation time between influencers and brands?</p>
                   
                   <p><b>First iteration:</b> How do we reconcile brand and influencer expectations to produce desired outcomes?</p>
@@ -203,7 +214,7 @@ function Home() {
 
         <div className='fireside-section'>
           <div className='gray-gradient-bg'>              
-          <div className='p5' style={{paddingTop: '3vh', paddingLeft: '7%', paddingRight: '10%'}}>
+          <div className='p5' style={{paddingTop: '3vh', paddingLeft: '10%', paddingRight: '10%'}}>
           Findings from the fireside chat
           </div>
           <div className='p4' style={{paddingLeft: '10%', paddingRight: '10%'}}>
@@ -223,7 +234,6 @@ function Home() {
       {/* Design */}
       <div id='design' className='section'>
         <Label label='Design'/>
-        <div className='matchbox-logo'>the matchbox</div>
         <div className='two-step'>
           <div className='white-bg'>
             <div className='p5' >what is the matchbox? </div>
@@ -240,40 +250,37 @@ function Home() {
           </div>
           <img src={Prototype1}></img>
         </div>
-        <div className='three-step-animation'>
-          <div className='horizontal-line'></div>
-        </div>
-        <div className='three-step'>
-          <div className='number-label'>1</div>
-          <div className='number-label'>2</div>
-          <div className='number-label'>3</div>
-        </div>
-        <div className='three-step'>
-          <div className='gray-bg'>
-          <div className='p5-white'>
-            reducing the negotation time
+        <div className='gray-gradient-bg'>
+          <div className='three-step'>
+            <div className='gray-bg'>
+              <div className='p5-white'>
+                1. <br/><br/>reducing the negotation time
+              </div>
+              <div className='p1'>
+                We tackle the negotiation process, our identified bottleneck. This improves the overall time 
+              that it takes for brands to get their desired  result of the campaign. 
+              </div>
+            </div>
+            <div className='gray-bg'>
+              <div className='p5-white'>
+                2.<br/><br/>by transparency and standardization
+              </div>
+              <div className='p1'>
+                We foster transparency between what the brand wants and what the influencer can do. This 
+                reconciles the expectations for both parties.
+              </div>
+            </div>
+            <div className='gray-bg'>
+              <div className='p5-white'>
+                3.<br/><br/>through matchbox!
+              </div>
+              <div className='p1'>
+              We build a "matchbox" - a standardized communication template from brands to the influencers with the goal to easily quickly communicate needs between both parties.
+              </div>
+            </div>
           </div>
-          <div className='p1'>
-            We tackle the negotiation process, our identified bottleneck. This improves the overall time 
-          that it takes for brands to get their desired  result of the campaign. 
-          </div>
-          </div>
-          <div className='gray-bg'>
-          <div className='p5-white'>
-          by transparency and standardization
-          </div>
-          <div className='p1'>
-          We foster transparency between what the brand wants and what the influencer can do. This 
-          reconciles the expectations for both parties.
-          </div>
-          </div>
-          <div className='gray-bg'>
-          <div className='p5-white'>
-            through matchbox!
-          </div>
-          <div className='p1'>
-          We build a "matchbox" - a standardized communication template from brands to the influencers with the goal to easily quickly communicate needs between both parties.
-          </div>
+          <div className='three-step-animation' style={{padding: '5vh'}}>
+            <div className='horizontal-line'></div>
           </div>
         </div>
         <div className='design-process'>
@@ -297,6 +304,7 @@ function Home() {
         <div className='prototypes'>
               <img src={Prototype1}></img>
               <img src={Prototype2}></img>
+              <img src={Prototype3}></img>
           </div>
       </div>
 
@@ -349,4 +357,4 @@ function Home() {
     </>
   )
 }
-export default Home;
+export default Project;

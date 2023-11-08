@@ -1,15 +1,27 @@
 import React from "react";
+import { WithContext as ReactTags } from 'react-tag-input';
+
 import "./Card.scss";
 
 import Arrow from '../../assets/icons/arrow.svg';
+import Tag from '../Tag/Tag.tsx';
 
 export interface CardProps {
   image: string;
   title: string;
   description: string[];
+  date: string;
+  tags: string[];
+}
+
+export interface Date {
+  date: string;
 }
 
 const Card = (props: CardProps) => {
+  const description = props.description ? props.description : [];
+  const descriptionItems = 
+    description.map(str => <li>{str}</li>);
   return (
     <>
     <div className="card">
@@ -17,29 +29,27 @@ const Card = (props: CardProps) => {
           <div className="text-background">
               <div className="text">
                   <div className="title">{props.title}</div>
-                  <ul className="desription">
-                      {
-                      props.description?.map(str =>
-                          <li>{str}</li>)
-                      }
+                  <ul className="description">
+                      {descriptionItems}
                   </ul>
+                  <Tag tags={props.tags}/>
               </div>
               <img src={Arrow}></img>
           </div>
         </button>
-        <CardTimeline />
+        <CardTimeline date={props.date}/>
       </div>
     </>
   )
 };
 
-const CardTimeline = () => {
+const CardTimeline = (props: Date) => {
 
   return (
     <>
     <div className="timeline">
       <div className="line"></div>
-      <div className="timeline-text">benchmark</div>
+      <div className="timeline-text">{props.date}</div>
       <div className="line"></div>
     </div>
     </>
