@@ -9,10 +9,10 @@ function Navbar() {
   return (
     <>
     <div className="navigation">
-        <Link to='/'>
+        {/* <Link to='/'>
             <button className="about">home</button>
-        </Link>
-        <Link to='/'>
+        </Link> */}
+        {/* <Link to='/'>
             <button className="about">about</button>
         </Link>
         <Link to='/'>
@@ -20,7 +20,7 @@ function Navbar() {
         </Link>
         <Link to='/'>
             <button className="about">resume</button>
-        </Link>
+        </Link> */}
     </div>
     </>
   )

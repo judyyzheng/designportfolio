@@ -4,26 +4,20 @@ $purple: linear-gradient(180deg, #000000 0%, #040028c5 100%);
 $blue: linear-gradient(180deg, #1E1E1E 0%, #006aff 100%);
 
 // Common components
-.section {
+.section-tb {
+    display: flex;
+    flex-direction: column;
     padding: 5vh 15vh 5vh 15vh;
     background-color: white
 }
 
-.gray-bg {
-    background: $dark;
-    backdrop-filter: blur(2px);
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 6vh;
-    padding: 6vh;
-}
-
-.gray-gradient-bg {
-    background: $gray;
-    backdrop-filter: blur(20px) grayscale(20%);
-    /* Note: backdrop-filter has minimal browser support */
+.white-gradient-bg {
+    background: white;
     border-radius: 80px 100px 100px 100px;
     padding: 5vh;
-    overflow:scroll;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
 }
 
 .white-bg {
@@ -34,7 +28,7 @@ $blue: linear-gradient(180deg, #1E1E1E 0%, #006aff 100%);
     padding: 5vh;  
 }
 
-.p1 {
+.p1-tb {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -45,48 +39,29 @@ $blue: linear-gradient(180deg, #1E1E1E 0%, #006aff 100%);
     padding: 2vh;
 }
 
-.matchbox-logo {
-    padding: 3vh;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 10vh;
-    text-align: left;
-
-    background: $blue;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 // white header
-.p2 {
+.p2-tb {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 6vh;
     color: white;
-    backdrop-filter: blur(2px);
     text-align: center;
 }
 
 // purple gradient header
-.p3 {
-    padding-bottom: 10vh;
+.p3-tb {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 8vh;
     text-align: left;
 
-    background: $blue;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: white;
 }
 
 // regular black paragraph
-.p4 {
+.p4-tb {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -106,7 +81,7 @@ $blue: linear-gradient(180deg, #1E1E1E 0%, #006aff 100%);
     }
 }
 
-.p5 {
+.p5-tb {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 900;
@@ -114,7 +89,7 @@ $blue: linear-gradient(180deg, #1E1E1E 0%, #006aff 100%);
     line-height: 4.5vh;
     text-transform: lowercase;
     
-    color: $dark;
+    color: white;
 }
 
 // white header
@@ -129,163 +104,112 @@ $blue: linear-gradient(180deg, #1E1E1E 0%, #006aff 100%);
 
     color: white;
 }
-
-.horizontal-line {
-    position: absolute;
-    border: 1px solid #000000;
-    height: 0px;
-    width: 23vh;
-}
-
 // Background
 
-.background-section-img {
-    background:
-            url("../../assets/projects/girltrain.png");
-    overflow: hidden;
+div#background {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
 }
-
 // Problem
-.fixedbgd {
+
+.fixedbgd-tb {
     position: absolute;
-    background: url("../../assets/projects/SocialCurrant/background.jpg");
+    background: url("../../assets/projects/TradeBooker/bbgbgd.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
     height: 500vh;
-
     z-index: -1;
 }
 
-.fixed {
-    position: absolute;
-    background: linear-gradient(180deg, rgba(30, 30, 30, 0.8) 0%, rgba(30, 30, 30, 0.48) 100%), 
-            url("../../assets/projects/SocialCurrant/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: hue-rotate(20deg) grayscale(100%);
-    width: 100%;
-    height: 60vh;
-
-    z-index: -1;
-}
-
-// Planning
-// Research
-.pain-point-section {
-    display: flex;
-    flex-direction: row;
-    column-gap: 15vh;
-
-    .pain-points{
-        display: flex;
-        flex-direction: column;
-        width: 45%;
-        align-self: center;
-    }
-}
-
-.side-img {
+.pain-point-section-tb {
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 3vh;
-    width: 100%;
-    padding: 5vh 0 5vh 0;
+    justify-content: space-around;
     div {
-        overflow: hidden;
-        width:50%;  
-        height: auto;
+        flex-grow: 1;
     }
-    img {
-        width:50%;
-    }
-    img:hover {
-        height:fit-content;
+    .pain-points {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
     }
 }
 
-.fireside-section {
-    display: flex;
-    flex-direction: row;
-    padding-top: 5vh;
-}
-// Design
-.three-step-animation {
-    animation: lineShift 10s ease-in-out 0s infinite;
-    .horizontal-line {
-        transform: translate(0, 0vh);
-    }
-}
+// Application
 
-@keyframes lineShift {
-    0% {
-      transform: translate(0);
-    }
-    50% {
-      transform:  translate(120vh);
-    }
-    100% {
-        transform:  translate(0vh);
-    }
-  }
-
-.three-step {
-    display: flex;
-    flex-direction: row;
-    column-gap: 3vh;
-    align-content:space-between ;
-}
-
-.two-step {
-    display: flex;
-    flex-direction: row;
-    padding: 5vh;
-    img {
-        width: 40%;
-    }
-}
-
-.design-process {
-    padding-top: 10vh;
-}
-
-.feedbackloop > img {
-    width: 90%;
-    height: auto;
-}
-
-.wireframe {
-    text-align: right;
-}
-
-.prototypes {
+.application {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    border-radius: 4vh;
-    padding: 10vh 0 10vh 0;
-    img {
-        position: relative;
-        width: 90vh;
-        rotate: 1deg;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    row-gap: 10vh;
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+        img {
+            max-width: 70%;
+            display: block;
+            margin: auto;
+            flex-grow: 1;
+            width: 1;
+        }
+        div.gray-gradient-bg {
+            flex-grow: 1;
+            margin: 20px;
+            div {
+                margin: 20px;
+            }
+        }
     }
 }
+// Prototype
 
-.fixed2 {
-    position: absolute;
-    background: url("../../assets/projects/SocialCurrant/background.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    width: 100%;
-    height: 200vh;
-
-    z-index: -1;
+div#half-circle-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+.half-circle {
+    width: 50px;
+    height: 100px;
+    border-radius: 0 50px 50px 0px; /* for the left half circle */
+    background-color: $dark; /* Example background color */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .half-circle-right {
+    width: 50px;
+    height: 100px;
+    border-radius: 50px 0px 0px 50px; /* for the left half circle */
+    background-color: $dark; /* Example background color */
+    position: relative;
+    overflow: hidden;
+  }
+// Design
 // Refinement
-// KPI
+// Result
+
+.impact-points {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    .impact-p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3vh;
+        line-height: 4.5vh;
+        text-transform: lowercase;
+        
+        color: $dark;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
 // Reflection
