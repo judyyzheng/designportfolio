@@ -5,6 +5,7 @@ import './index.css';
 import Home from './pages/Home';
 import Project from './pages/matchbox/Project';
 import TradeBookerPage from './pages/tradebooker/TradeBookerPage';
+import Gallery from './pages/gallery/Gallery';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter,  
@@ -18,6 +19,7 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/project" element={<Project />} />
       <Route path="/tradebooker" element={<TradeBookerPage />} />
+      <Route path="/gallery" element={<Gallery />} />
     </Routes>
   </BrowserRouter>
 );

@@ -111,7 +111,26 @@ div#background {
     flex-direction: column;
     row-gap: 5vh;
 }
+
+#tb-logo {
+    width: 10vh;
+    height: auto;
+    padding-left: 45%;
+}
 // Problem
+
+div#problem {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    div.p5 {
+        padding: 20px;
+        position: sticky;
+        top: 0px;
+    }
+}
 
 .fixedbgd-tb {
     position: absolute;
@@ -137,6 +156,16 @@ div#background {
         flex-direction: column;
         row-gap: 2vh;
     }
+}
+
+// Solution
+div#solution {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 // Application
@@ -194,7 +223,6 @@ div#half-circle-container {
 // Design
 // Refinement
 // Result
-
 .impact-points {
     display: flex;
     flex-direction: column;
@@ -210,6 +238,19 @@ div#half-circle-container {
         color: $dark;
         padding: 10px;
         border-radius: 10px;
+    }
+}
+
+// Summary
+div#summary {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    div {
+        color: white;
     }
 }
 // Reflection

@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./TradeBookerPage.scss";
-import { HashLink } from "react-router-hash-link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Components
 import Label from "../../components/Label/Label.tsx";
-import Timeline from "../../components/Timeline/Timeline.tsx";
-import CircleGraph from "../../components/CircleGraph/CircleGraph.tsx";
 import Quote from "../../components/Quote/Quote.tsx";
 import Slideshow from "../../components/Slideshow/Slideshow.tsx";
 import FadeImages from "../../components/FadeImages/FadeImages.tsx";
@@ -42,8 +41,18 @@ import Prototype12 from "../../assets/projects/TradeBooker/prototype12.jpg";
 import Prototype13 from "../../assets/projects/TradeBooker/prototype13.jpg";
 import Prototype14 from "../../assets/projects/TradeBooker/prototype14.jpg";
 import Prototype15 from "../../assets/projects/TradeBooker/prototype15.jpg";
+import TradeBookerLogo from "../../assets/projects/TradeBooker/tradebookerlogo.svg";
 
 function TradeBookerPage() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 300, // Animation duration in milliseconds
+      easing: 'ease-out', // Easing function for the animation
+      once: false, // Whether to only animate elements once
+    });
+  }, []);
+
   return (
     <>
       <PageNavbar
@@ -63,10 +72,12 @@ function TradeBookerPage() {
       <div
         id="background"
         className="section-tb"
-        style={{ backgroundColor: "transparent" }}
+        style={{ backgroundColor: "whitesmoke" }}
       >
-        <div className="p5-tb">Scotiabank</div>
-        <div className="p3-tb">
+        <div className="p5" style={{ color: "#1e1e1e" }}>
+          Scotiabank
+        </div>
+        <div className="p3-tb" style={{ color: "#1e1e1e" }}>
           Global Banking and Markets
           <br />
           Trade Booker
@@ -95,7 +106,7 @@ function TradeBookerPage() {
               of answers by digging through the Python code base.{" "}
             </p>
             <p>
-              <b>This was a massive turning point for me. </b>
+            <div className="p5">The turning point </div>
             </p>
             <p>
               Once I built up an understanding of our pricing strategies and
@@ -126,6 +137,7 @@ function TradeBookerPage() {
                 <b>... and the Trade Booker API!</b>
               </li>
             </ol>
+            <img id="tb-logo" src={TradeBookerLogo} data-aos="fade-up"/>
           </div>
         </div>
       </div>
@@ -141,20 +153,25 @@ function TradeBookerPage() {
           How do we <b>steamline</b> the tradebooking process?
         </div>
       </div> */}
+
       <div
         id="problem"
         className="section-tb"
-        style={{ backgroundColor: "white" }}
+        style={{ backgroundColor: "#1e1e1e" }}
       >
-        <div className="white-gradient-bg">
-          <Label label="the problem scope" />
-          <div className="p5" style={{ textAlign: "center" }}>
-            there were three root issues we faced in the trade booking process.
-          </div>
-          <div className="p4" style={{ textAlign: "center" }}>
-            the slideshows below provide an overview of these pain points and
-            their causes!
-          </div>
+        <div
+          className="p5"
+          style={{
+            textAlign: "center",
+            color: "white",
+            backgroundColor: "#1e1e1e",
+          }}
+        >
+          there were three root issues we faced in the trade booking process.
+        </div>
+        <div className="p4" style={{ textAlign: "center", color: "white" }}>
+          the slideshows below provide an overview of these pain points and
+          their causes!
         </div>
       </div>
 
@@ -183,7 +200,7 @@ function TradeBookerPage() {
                 text: " So at the end of the day, all the transactions we made on these different platforms would need to be manually booked into our internal records.",
               },
             ]}
-            duration={5000}
+            duration={50000}
           />
         </div>
       </div>
@@ -209,7 +226,7 @@ function TradeBookerPage() {
                 text: "Batch orders were not always filled at the same price. One order could be split into several partial fills that would need to be booked as individual tickets (even though all the details were the same).",
               },
             ]}
-            duration={5000}
+            duration={50000}
           />
         </div>
       </div>
@@ -235,7 +252,7 @@ function TradeBookerPage() {
                 text: "So even after the market closed, the traders often spent another hour trying to comb through every single record just to find that missing penny.",
               },
             ]}
-            duration={5000}
+            duration={50000}
           />
         </div>
       </div>
@@ -273,46 +290,51 @@ function TradeBookerPage() {
           were using, a <b>static booking form</b> for all our products, and a
           manual process that was very <b>prone to human error</b>.
         </div>
-        <div className="p4">
+      </div>
+
+      {/* Solution */}
+      <div
+        id="solution"
+        className="section-tb"
+        style={{ backgroundColor: "#1e1e1e" }}
+      >
+        <div className="p5-tb">
           My solution took a <b>three-pronged approach:</b>
         </div>
-        <div className="gray-gradient-bg">
-          <div className="three-step">
-            <div className="gray-bg">
-              <div className="p5-white">
-                1. <br />
-                centralize data entry
-              </div>
-              <div className="p1">
-                To tackle lack of data standardization by centralizing the data
-                entry from multiple sources.
-              </div>
+        <div className="three-step">
+          <div data-aos="fade-up">
+            <div className="p5-white">
+              1. <br />
+              centralize data entry
             </div>
-            <div className="gray-bg">
-              <div className="p5-white">
-                2.
-                <br />
-                bulk upload feature
-              </div>
-              <div className="p1">
-                To create a dynamic booking form by providing some sort of a
-                bulk upload feature.
-              </div>
+            <div className="p1">
+              To tackle lack of data standardization by centralizing the data
+              entry from multiple sources.
             </div>
-            <div className="gray-bg">
-              <div className="p5-white">
-                3.
-                <br />
-                eliminate manual input errors
-              </div>
-              <div className="p1">
-                To eliminate human error by reducing the layers of
-                intermediaries as much as possible.
-              </div>
+          </div>
+          <div data-aos="fade-up">
+            <div className="p5-white">
+              2.
+              <br />
+              bulk upload feature
+            </div>
+            <div className="p1">
+              To create a dynamic booking form by providing some sort of a bulk
+              upload feature.
+            </div>
+          </div>
+          <div data-aos="fade-up">
+            <div className="p5-white">
+              3.
+              <br />
+              eliminate manual input errors
+            </div>
+            <div className="p1">
+              To eliminate human error by reducing the layers of intermediaries
+              as much as possible.
             </div>
           </div>
         </div>
-        <div className="design-process"></div>
       </div>
 
       {/* Application */}
@@ -327,9 +349,10 @@ function TradeBookerPage() {
             <div className="p5" style={{ textAlign: "center" }}>
               centralizing data entry
             </div>
-            <img src={CentralizeDataEntry} />
+            <img src={CentralizeDataEntry} data-aos="fade-left" />
             <div className="gray-gradient-bg">
               <div className="p4">
+                <strong>explanation:</strong>
                 On the back-end, the input from each of the platforms was parsed
                 into a consistent JSON object, and then displayed back to the
                 user. I implemented an initial layer of validation in this step
@@ -342,10 +365,11 @@ function TradeBookerPage() {
             <div className="p5" style={{ textAlign: "center" }}>
               eliminating manual input errors
             </div>
-            <img src={EliminateManualError} />
-            <img src={EliminateManualError2} />
+            <img src={EliminateManualError} data-aos="fade-down"/>
+            <img src={EliminateManualError2} data-aos="fade-up"/>
             <div className="gray-gradient-bg">
               <div className="p4">
+                <strong>explanation:</strong>
                 To add another layer of validation, the API also mapped each of
                 the securities and trader id fields to what we currently had in
                 our records. So for example, if a security name hadn’t been
@@ -357,9 +381,10 @@ function TradeBookerPage() {
             <div className="p5" style={{ textAlign: "center" }}>
               bulk upload feature
             </div>
-            <img src={BulkUploadFeature} />
+            <img src={BulkUploadFeature}  data-aos="fade-left"/>
             <div className="gray-gradient-bg">
               <div className="p4">
+                <strong>explanation:</strong>
                 To actually update the data, I used Flask and Python to set up a
                 route from the client to the server and implemented the
                 connection access into the targeted SQL collection. Multiple
@@ -411,7 +436,7 @@ function TradeBookerPage() {
               { src: Prototype14 },
               { src: Prototype15 },
             ]}
-            duration={500}
+            duration={800}
           />
         </div>
       </div>
@@ -441,38 +466,46 @@ function TradeBookerPage() {
             application caught that before it ever was sent out.
           </div>
           <FadeImages images={[Result, Result2]} />
-          <div className="p5" style={{ textAlign: "center", padding: "10px" }}>
-            A summary of achievements:
+        </div>
+      </div>
+
+      {/* Summary of Results */}
+      <div
+        id="summary"
+        className="section-tb"
+        style={{ backgroundColor: "#1e1e1e" }}
+      >
+        <div className="p5-tb">
+          A summary of achievements:
+        </div>
+        <div className="impact-points">
+          <div>
+            <div className="impact-p">✅ A single pipeline</div>
+            <div className="p4">
+              The application was able to centralize our trade entry from
+              several third-party platforms, with the versatility to accomodate
+              several data formats.
+            </div>
           </div>
-          <div className="impact-points">
-            <div>
-              <div className="impact-p">✅ A single pipeline</div>
-              <div className="p4">
-                The application was able to centralize our trade entry from
-                several third-party platforms, with the versatility to
-                accomodate several data formats.
-              </div>
-            </div>
-            <div>
-              <div className="impact-p">
+          <div>
+            <div className="impact-p">
               ✅ Minimize the involvement of intermediaries
-              </div>
-              <div className="p4">
-                With a single pipeline, traders no longer needed to turn to
-                middlemen for help - this significantly reduced the time and
-                effort for each trade booked.
-              </div>
             </div>
-            <div>
-              <div className="impact-p">
+            <div className="p4">
+              With a single pipeline, traders no longer needed to turn to
+              middlemen for help - this significantly reduced the time and
+              effort for each trade booked.
+            </div>
+          </div>
+          <div>
+            <div className="impact-p">
               ✅ Eliminated upwards of 90% of reconciliation errors
-              </div>
-              <div className="p4">
-                As the data was directly imported from the market, there was
-                little manual interception. This meant nearly all of our
-                post-trade reconciliation errors were prevented, and made for a
-                much more robust process!
-              </div>
+            </div>
+            <div className="p4">
+              As the data was directly imported from the market, there was
+              little manual interception. This meant nearly all of our
+              post-trade reconciliation errors were prevented, and made for a
+              much more robust process!
             </div>
           </div>
         </div>

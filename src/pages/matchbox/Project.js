@@ -109,14 +109,13 @@ function Project() {
       </div>
 
       {/* Problem */}
-      <div className="fixed"></div>
       <div
         id="problem"
         className="section"
-        style={{ backgroundColor: "transparent" }}
+        style={{ backgroundColor: "whitesmoke" }}
       >
         <Label label="Problem" />
-        <div className="p2" style={{ padding: "10vh" }}>
+        <div className="p5" style={{ padding: "10vh" }}>
           How do we <b>speed up</b> the campaign launch process for brands on
           Social Currant?
         </div>
