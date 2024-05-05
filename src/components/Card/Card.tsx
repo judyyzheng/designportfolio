@@ -1,10 +1,10 @@
 import React from "react";
-import { WithContext as ReactTags } from 'react-tag-input';
+import { Link } from 'react-router-dom';
 
 import "./Card.scss";
 
-import Arrow from '../../assets/icons/arrow.svg';
-import Tag from '../Tag/Tag.tsx';
+import Arrow from "../../assets/icons/arrow.svg";
+import Tag from "../Tag/Tag.tsx";
 
 export interface CardProps {
   image: string;
@@ -12,6 +12,7 @@ export interface CardProps {
   description: string[];
   date: string;
   tags: string[];
+  link: string
 }
 
 export interface Date {
@@ -20,41 +21,42 @@ export interface Date {
 
 const Card = (props: CardProps) => {
   const description = props.description ? props.description : [];
-  const descriptionItems = 
-    description.map(str => <li>{str}</li>);
+
+  const descriptionItems = description.map((str) => <li>{str}</li>);
+
   return (
     <>
-    <div className="card">
-      <button className="background" style={{backgroundImage: `url(${props.image})`}}>
+      <div className="card">
+        <Link to={props.link}><button
+          className="background"
+          style={{ backgroundImage: `url(${props.image})` }}
+        >
           <div className="text-background">
-              <div className="text">
-                  <div className="title">{props.title}</div>
-                  <ul className="description">
-                      {descriptionItems}
-                  </ul>
-                  <Tag tags={props.tags}/>
-              </div>
-              <img src={Arrow}></img>
+            <div className="text">
+              <div className="title">{props.title}</div>
+              <ul className="description">{descriptionItems}</ul>
+              <Tag tags={props.tags} />
+            </div>
+            <img src={Arrow}></img>
           </div>
         </button>
-        <CardTimeline date={props.date}/>
+        </Link>
+        <CardTimeline date={props.date} />
       </div>
     </>
-  )
+  );
 };
 
 const CardTimeline = (props: Date) => {
-
   return (
     <>
-    <div className="timeline">
-      <div className="line"></div>
-      <div className="timeline-text">{props.date}</div>
-      <div className="line"></div>
-    </div>
+      <div className="timeline">
+        <div className="line"></div>
+        <div className="timeline-text">{props.date}</div>
+        <div className="line"></div>
+      </div>
     </>
-  )
-
-}
+  );
+};
 
 export default Card;

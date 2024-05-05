@@ -1,0 +1,28 @@
+/* Gallery.css */
+.display-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.artwork-card {
+  max-width: 500px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Inter';
+}
+
+.artwork-card-secondary {
+  max-width: 300px;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.artwork-card img, .artwork-card-secondary img {
+  max-width: 100%;
+  border-radius: 10vh;
+  height: auto;
+}

@@ -1,0 +1,64 @@
+$dark: #1e1e1e;
+$gray: radial-gradient(58.56% 54.51% at 36.71% 65.78%, rgba(255, 255, 255, 0.88) 0%, #F1F1F1 100%);
+$light: #4f6ad6;
+
+div#fixed-navbar {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    list-style-type: none;
+    z-index: 1;
+    width: 100%;
+}
+
+div#fixed-navbar > li {
+    color: white;
+    text-decoration: none;
+    font-family: "Inter";
+    font-size: 2.1vh;
+    text-align: center;
+    text-transform: lowercase;
+    padding: 10px;
+    width: auto;
+  }
+
+#navbar {
+  background-color: whitesmoke;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  list-style-type: none;
+  z-index: 1;
+  padding: 10px;
+}
+
+#navbar > * {
+  &:link {
+    color: grey;
+    text-decoration: none;
+    font-family: "Inter";
+    font-size: 2.1vh;
+    text-align: center;
+    text-transform: lowercase;
+  }
+
+  /* visited link */
+  &:visited {
+    color: grey;
+  }
+
+  /* mouse over link */
+  &:hover {
+    color: lightsteelblue;
+  }
+
+  /* selected link */
+  a.active {
+    background-color: $light;
+    color: black;
+  }
+}
+
+
