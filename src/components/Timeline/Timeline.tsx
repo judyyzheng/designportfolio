@@ -121,18 +121,4 @@ const Timeline = () => {
   )
 };
 
-const TimelineTimeline = () => {
-
-  return (
-    <>
-    <div className="timeline">
-      <div className="line"></div>
-      <div className="timeline-text">benchmark</div>
-      <div className="line"></div>
-    </div>
-    </>
-  )
-
-}
-
 export default Timeline;

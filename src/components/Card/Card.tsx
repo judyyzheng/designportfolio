@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 
 import "./Card.scss";
@@ -37,7 +37,7 @@ const Card = (props: CardProps) => {
               <ul className="description">{descriptionItems}</ul>
               <Tag tags={props.tags} />
             </div>
-            <img src={Arrow}></img>
+            <img src={Arrow} alt="arrow"></img>
           </div>
         </button>
         </Link>

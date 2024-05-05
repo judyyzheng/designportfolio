@@ -137,7 +137,7 @@ function TradeBookerPage() {
                 <b>... and the Trade Booker API!</b>
               </li>
             </ol>
-            <img id="tb-logo" src={TradeBookerLogo} data-aos="fade-up"/>
+            <img id="tb-logo" src={TradeBookerLogo} data-aos="fade-up" alt="logo"/>
           </div>
         </div>
       </div>
@@ -349,7 +349,7 @@ function TradeBookerPage() {
             <div className="p5" style={{ textAlign: "center" }}>
               centralizing data entry
             </div>
-            <img src={CentralizeDataEntry} data-aos="fade-left" />
+            <img src={CentralizeDataEntry} data-aos="fade-left" alt="Centralize Data Entry"/>
             <div className="gray-gradient-bg">
               <div className="p4">
                 <strong>explanation:</strong>
@@ -365,8 +365,8 @@ function TradeBookerPage() {
             <div className="p5" style={{ textAlign: "center" }}>
               eliminating manual input errors
             </div>
-            <img src={EliminateManualError} data-aos="fade-down"/>
-            <img src={EliminateManualError2} data-aos="fade-up"/>
+            <img src={EliminateManualError} data-aos="fade-down" alt="fade"/>
+            <img src={EliminateManualError2} data-aos="fade-up" alt="fade"/>
             <div className="gray-gradient-bg">
               <div className="p4">
                 <strong>explanation:</strong>
@@ -381,7 +381,7 @@ function TradeBookerPage() {
             <div className="p5" style={{ textAlign: "center" }}>
               bulk upload feature
             </div>
-            <img src={BulkUploadFeature}  data-aos="fade-left"/>
+            <img src={BulkUploadFeature}  data-aos="fade-left" alt="fade"/>
             <div className="gray-gradient-bg">
               <div className="p4">
                 <strong>explanation:</strong>

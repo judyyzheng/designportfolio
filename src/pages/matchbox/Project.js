@@ -60,10 +60,11 @@ function Project() {
               <img
                 src={CurrantApp}
                 style={{ height: "60vh", padding: "7vh", width: "auto" }}
+                alt="Social Currant App"
               ></img>
             </div>
             <div className="side-img">
-              <img src={Day2} style={{ borderRadius: "4vh" }}></img>
+              <img src={Day2} style={{ borderRadius: "4vh" }} alt="day2"></img>
               <div>
                 <div className="p5">
                   Our team proposed the winning solution.
@@ -77,6 +78,7 @@ function Project() {
                 <img
                   src={Day1}
                   style={{ borderRadius: "4vh", height: "34vh", width: "auto" }}
+                  alt="day1"
                 ></img>
               </div>
             </div>
@@ -86,7 +88,7 @@ function Project() {
               product pitch!
             </p>
           </div>
-          <img src={SocialCurrantLogo} style={{ paddingTop: "7vh" }}></img>
+          <img src={SocialCurrantLogo} style={{ paddingTop: "7vh" }} alt="logo"></img>
         </div>
       </div>
 
@@ -165,11 +167,11 @@ function Project() {
                   <li>What are the success metrics of the campaign?</li>
                 </ul>
               </p>
-              <img src={BrandInfluencer} style={{ width: "70vh" }}></img>
+              <img src={BrandInfluencer} style={{ width: "70vh" }} alt="brand influencer"></img>
             </div>
 
             <div className="side-img">
-              <img src={Content2}></img>
+              <img src={Content2} alt="content 2"></img>
               <p>
                 {" "}
                 Moreover, brands find it difficult to identify the right
@@ -286,7 +288,7 @@ function Project() {
               </p>
             </div>
           </div>
-          <img src={Prototype1}></img>
+          <img src={Prototype1} alt="prototype"></img>
         </div>
         <div className="gray-gradient-bg">
           <div className="three-step">
@@ -347,7 +349,7 @@ function Project() {
                 between the brand and the influencer.
               </p>
             </div>
-            <img src={FeedbackLoop}></img>
+            <img src={FeedbackLoop} alt="feedbackloop"></img>
           </div>
           <div className="wireframe">
             <div
@@ -362,6 +364,7 @@ function Project() {
             <img
               src={Wireframe}
               style={{ width: "50%", paddingBottom: "5vh" }}
+              alt="wireframe"
             ></img>
           </div>
         </div>
@@ -376,9 +379,9 @@ function Project() {
       >
         <Label label="Prototype" />
         <div className="prototypes">
-          <img src={Prototype1}></img>
-          <img src={Prototype2}></img>
-          <img src={Prototype3}></img>
+          <img src={Prototype1} alt="prototype"></img>
+          <img src={Prototype2} alt="prototype"></img>
+          <img src={Prototype3} alt="prototype"></img>
         </div>
       </div>
 
@@ -438,7 +441,7 @@ function Project() {
               success.
             </p>
           </div>
-          <img src={SocialCurrantLogo}></img>
+          <img src={SocialCurrantLogo} alt="logo"></img>
         </div>
       </div>
     </>

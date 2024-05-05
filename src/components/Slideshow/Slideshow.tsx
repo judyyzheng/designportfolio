@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Slideshow.scss"; // Import your CSS file
 
 const Slideshow = ({ images, duration }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [intervalId, setIntervalId] = useState(null);
+  const [intervalId, setIntervalId] = useState<any>(undefined);
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
@@ -21,7 +21,7 @@ const Slideshow = ({ images, duration }) => {
     setCurrentSlide((prevSlide) => (prevSlide === 0 ? prevSlide : 0));
   };
 
-  const restartInterval = () => {
+  const restartInterval = useCallback(() => {
     // Clear the existing interval
     clearInterval(intervalId);
 
@@ -32,13 +32,13 @@ const Slideshow = ({ images, duration }) => {
 
     // Save the new interval ID to state
     setIntervalId(newIntervalId);
-  };
+  },[duration, images.length, intervalId]);
 
   useEffect(() => {
     restartInterval();
 
     return () => clearInterval(intervalId);
-  }, [intervalId, duration, images.length]);
+  }, [intervalId, duration, images.length, restartInterval]);
 
   return (
     <div className="slideshow-container">
