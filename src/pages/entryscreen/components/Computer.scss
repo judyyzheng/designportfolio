@@ -1,0 +1,32 @@
+.computer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.computer {
+    position: absolute;
+    height: 90vh;
+    width: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.gradient {
+    top: 50%;
+    position: absolute;
+    background: radial-gradient(50% 50% at 50% 50%, #140a56 0%, rgba(0, 0, 0, 0) 100%);
+    height: 20vh;
+    width: 100vh;
+}
+
+.computer > img {
+    align-self: center;
+}
+
+.computer > .screen {
+    transition: opacity 1s ease-in-out;
+}

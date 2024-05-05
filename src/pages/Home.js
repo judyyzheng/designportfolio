@@ -11,6 +11,7 @@ import Label from '../components/Label/Label.tsx';
 import GirlOnTrain from '../assets/projects/girltrain.png';
 import BbgBgd from '../assets/projects/TradeBooker/bbgbgd.jpg';
 import SCBgd from '../assets/projects/SocialCurrant/day3.jpg';
+import EntryScreen from './entryscreen/EntryScreen.js';
 
 function Home() {
   const [showHowdy, setShowHowdy] = React.useState(false);
@@ -24,6 +25,7 @@ function Home() {
 
   return (
     <>
+    <EntryScreen />
       <Navbar />
       <Link to="/gallery">
         {showHowdy && <div className="circular-button-howdy">check out some horse art</div>}

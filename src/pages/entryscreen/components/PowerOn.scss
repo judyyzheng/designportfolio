@@ -1,0 +1,25 @@
+.poweron-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.poweron {
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    z-index: 2;
+    font-size: 40px;
+}
+
+.poweron-text {
+    color: lightgrey;
+    text-align: center;
+    z-index: 2;
+    font-size: 14px;
+}
