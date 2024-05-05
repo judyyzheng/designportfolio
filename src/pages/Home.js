@@ -38,9 +38,9 @@ function Home() {
         <div className="header">hi, i'm <strong>judy zheng</strong></div>
         <div className="header-introduction">i'm an aspiring fullstack developer with a big passion for fintech, who also paints horses for fun.</div>
         <div class="personal-links-button-row">
-            <a href="https://github.com/judyyzheng" target="_blank" class="button github"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/judy-zheng-852258160/" target="_blank" class="button linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="../assets/resume/judyzhengresume.pdf" target="_blank" class="button resume"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="https://github.com/judyyzheng" target="_blank" rel="noopener noreferrer" class="button github"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/judy-zheng-852258160/" target="_blank" rel="noopener noreferrer" class="button linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="../assets/resume/judyzhengresume.pdf" target="_blank" rel="noopener noreferrer" class="button resume"><i class="fas fa-file-alt"></i> Resume</a>
         </div>
       </div>
       <div className="projects-section">
