@@ -48,7 +48,7 @@ function TradeBookerPage() {
 
   useEffect(() => {
     AOS.init({
-      duration: 300, // Animation duration in milliseconds
+      duration: 200, // Animation duration in milliseconds
       easing: 'ease-out', // Easing function for the animation
       once: false, // Whether to only animate elements once
     });

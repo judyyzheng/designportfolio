@@ -9,7 +9,7 @@ import Label from '../components/Label/Label.tsx';
 // Assets
 import GirlOnTrain from '../assets/projects/girltrain.png';
 import BbgBgd from '../assets/projects/TradeBooker/bbgbgd.jpg';
-import SCBgd from '../assets/projects/SocialCurrant/day1.jpg';
+import SCBgd from '../assets/projects/SocialCurrant/day3.jpg';
 
 function Home() {
 
@@ -18,6 +18,7 @@ function Home() {
       <Navbar />
       <div className="front-section">
         <div className="header">hi, i'm <strong>judy zheng</strong></div>
+        <div className="header-introduction">i'm an aspiring fullstack developer with a big passion for fintech, who also paints horses for fun.</div>
       </div>
       <div className="projects-section">
         <div className="projects-text">
@@ -25,7 +26,7 @@ function Home() {
               my projects
               </div>
               <div className="header2">
-                here are some samples of my work.
+                here are some projects i've worked on.
               </div>
               <Label label="Explore"/>
         </div>

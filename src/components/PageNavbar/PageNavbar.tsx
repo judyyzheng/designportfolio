@@ -14,7 +14,7 @@ const PageNavbar = (props: PageNavbarProps) => {
               return (
                 <NavHashLink
                   key={index}
-                  smooth
+                  smooth={true}
                   to={"/" + props.project + "/#" + link.toLowerCase()}
                   exact
                 >
