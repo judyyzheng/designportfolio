@@ -1,4 +1,3 @@
-import { useState } from "react";
 import React from "react";
 import "./PageNavbar.scss";
 import { NavHashLink } from "react-router-hash-link";
@@ -8,27 +7,10 @@ export interface PageNavbarProps {
   links: string[]; // name of section
 }
 const PageNavbar = (props: PageNavbarProps) => {
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const handleMouseEnter = () => {
-    setDropdownVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    setDropdownVisible(false);
-  };
-  let pathname = window.location.href.split("#")[1];
-
   return (
-    <>
-      <div
-        id="fixed-navbar"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <li>/</li>
+      <div id="fixed-navbar">
         <nav id="navbar">
-          {isDropdownVisible &&
-            props.links.map((link, index) => {
+          {props.links.map((link, index) => {
               return (
                 <NavHashLink
                   key={index}
@@ -36,13 +18,12 @@ const PageNavbar = (props: PageNavbarProps) => {
                   to={"/" + props.project + "/#" + link.toLowerCase()}
                   exact
                 >
-                  <li> /{link} </li>
+                  <li> {link} </li>
                 </NavHashLink>
               );
             })}
         </nav>
       </div>
-    </>
   );
 };
 

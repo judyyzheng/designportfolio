@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import Label from "../../components/Label/Label.tsx";
 import Quote from "../../components/Quote/Quote.tsx";
 import Slideshow from "../../components/Slideshow/Slideshow.tsx";
+import Tag from "../../components/Tag/Tag.tsx";
 import FadeImages from "../../components/FadeImages/FadeImages.tsx";
 import PageNavbar from "../../components/PageNavbar/PageNavbar.tsx";
 
@@ -67,23 +68,22 @@ function TradeBookerPage() {
           "Reflection",
         ]}
       />
-      <div className="fixedbgd-tb"></div>
       {/* Background */}
       <div
         id="background"
         className="section-tb"
         style={{ backgroundColor: "whitesmoke" }}
       >
-        <div className="p5" style={{ color: "#1e1e1e" }}>
-          Scotiabank
-        </div>
         <div className="p3-tb" style={{ color: "#1e1e1e" }}>
           Global Banking and Markets
           <br />
-          Trade Booker
+          Trade Booker API
+        </div>
+        <div className="header-tags">
+          <Tag tags={["Scotiabank", "Global Banking and Markets"]}/>
+          <Tag tags={["Flask", "Python", "SQL"]}/>
         </div>
         <div className="white-gradient-bg">
-          <Label label="Background" />
           <div
             className="p4"
             style={{ paddingLeft: "10%", paddingRight: "10%" }}

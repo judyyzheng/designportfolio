@@ -12,8 +12,8 @@ $dark: #1E1E1E;
   }
 
 .tag {
-    background: crimson;
-    border-radius: 3px 0 0 3px;
+    background: #1E1E1E;
+    border-radius: 30px;
     color: white;
     display: inline-block;
     height: 26px;
@@ -22,6 +22,7 @@ $dark: #1E1E1E;
     position: relative;
     margin: 0 5px 5px 0;
     text-decoration: none;
+    font-size: 16px;
 }
 
 .tag:hover {

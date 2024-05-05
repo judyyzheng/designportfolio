@@ -110,12 +110,18 @@ div#background {
     display: flex;
     flex-direction: column;
     row-gap: 5vh;
+    padding-top: 12vh;
 }
 
 #tb-logo {
     width: 10vh;
     height: auto;
     padding-left: 45%;
+}
+
+div.header-tags {
+    display: flex;
+    flex-direction: column;
 }
 // Problem
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { WithContext as ReactTags } from "react-tag-input";
 import { Link } from 'react-router-dom';
 
 import "./Card.scss";

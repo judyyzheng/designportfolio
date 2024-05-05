@@ -8,11 +8,10 @@ div#fixed-navbar {
     flex-direction: row;
     list-style-type: none;
     z-index: 1;
-    padding: 10px;
+    width: 100%;
 }
 
 div#fixed-navbar > li {
-    background-color: $dark;
     color: white;
     text-decoration: none;
     font-family: "Inter";
@@ -24,12 +23,12 @@ div#fixed-navbar > li {
   }
 
 #navbar {
-  background-color: $dark;
+  background-color: whitesmoke;
   display: flex;
   position: fixed;
-  flex-direction: column;
-  row-gap: 1vh;
-  align-items: stretch;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
   list-style-type: none;
   z-index: 1;
   padding: 10px;
@@ -37,8 +36,7 @@ div#fixed-navbar > li {
 
 #navbar > * {
   &:link {
-    background-color: #1e1e1e;
-    color: white;
+    color: grey;
     text-decoration: none;
     font-family: "Inter";
     font-size: 2.1vh;
@@ -48,7 +46,7 @@ div#fixed-navbar > li {
 
   /* visited link */
   &:visited {
-    color: white;
+    color: grey;
   }
 
   /* mouse over link */
