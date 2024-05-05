@@ -6,7 +6,6 @@ import Label from "../../components/Label/Label.tsx";
 import Timeline from "../../components/Timeline/Timeline.tsx";
 import CircleGraph from "../../components/CircleGraph/CircleGraph.tsx";
 import Quote from "../../components/Quote/Quote.tsx";
-import PageNavbar from "../../components/PageNavbar/PageNavbar.tsx";
 
 // Assets
 import Prototype1 from "../../assets/projects/SocialCurrant/prototype1.svg";
