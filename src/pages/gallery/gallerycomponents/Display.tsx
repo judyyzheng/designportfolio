@@ -7,6 +7,7 @@ interface Artwork {
   title: string;
   image: string;
   description: string;
+  variant?: string;
 }
 
 interface DisplayProps {
@@ -17,7 +18,10 @@ const Display: React.FC<DisplayProps> = ({ artwork }) => {
   return (
     <div className="display-container">
       {artwork.map((artworkPiece) => (
-        <div key={artworkPiece.id} className="artwork-card">
+        <div 
+          key={artworkPiece.id} 
+          className={artworkPiece.variant === "primary" ? "artwork-card" : "artwork-card-secondary"}
+        >
           <img src={artworkPiece.image} alt={artworkPiece.title} />
           <h3>{artworkPiece.title}</h3>
           <p>{artworkPiece.description}</p>
