@@ -1,0 +1,58 @@
+$dark: #1E1E1E;
+
+.experience-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+}
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.experience-text > .title {
+    font-style: normal;
+    font-size: 2.5vh;
+}
+
+.experience-text > .subtitle {
+    font-style: normal;
+    font-size: 2.5vh;
+}
+
+.experience-text > * > li {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1.5vh;
+}
+
+.experience-timeline {
+    display: flex;
+    flex-direction: row;
+    row-gap: 2vh;
+}
+
+.experience-timeline > .line {
+    border: 1px solid #000000;
+    transform: rotate(-90deg);
+    height: 0px;
+    width: 10vh;
+}
+
+.timeline-experience-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2vh;
+    line-height: 10px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: lowercase;
+
+    color: #000000;
+}
