@@ -13,6 +13,7 @@ import GirlOnTrain from '../assets/projects/girltrain.png';
 import BbgBgd from '../assets/projects/TradeBooker/bbgbgd.jpg';
 import SCBgd from '../assets/projects/SocialCurrant/day3.jpg';
 import Me from '../assets/projects/me.jpg';
+import Resume from '../assets/resume/judyzhengresume.pdf'
 
 function Home() {
   const [showHowdy, setShowHowdy] = React.useState(false);
@@ -39,7 +40,7 @@ function Home() {
         <div class="personal-links-button-row">
             <a href="https://github.com/judyyzheng" target="_blank" rel="noopener noreferrer" class="button github"><i class="fab fa-github"></i> GitHub</a>
             <a href="https://www.linkedin.com/in/judy-zheng-852258160/" target="_blank" rel="noopener noreferrer" class="button linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="../assets/resume/judyzhengresume.pdf" target="_blank" rel="noopener noreferrer" class="button resume"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href={Resume} target="_blank" rel="noopener noreferrer" class="button resume"><i class="fas fa-file-alt"></i> Resume</a>
         </div>
       </div>
       <div className="about-section">
