@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+import EntryScreen from './pages/entryscreen/EntryScreen';
 import Home from './pages/Home';
 import Project from './pages/matchbox/Project';
 import TradeBookerPage from './pages/tradebooker/TradeBookerPage';
@@ -16,7 +17,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<EntryScreen />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/project" element={<Project />} />
       <Route path="/tradebooker" element={<TradeBookerPage />} />
       <Route path="/gallery" element={<Gallery />} />

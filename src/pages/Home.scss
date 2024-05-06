@@ -18,6 +18,27 @@ $dark: #1E1E1E;
     font-size: 50px;
 }
 
+.front-section > .header {
+    width: 14ch;
+    animation: typing 2s steps(14), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    // font-size: 2.6rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 .header-introduction {
     font-family: 'Inter';
     font-style: normal;
@@ -67,15 +88,7 @@ $dark: #1E1E1E;
     transition: all 0.3s ease;
 }
 
-.github {
-    background-color: $dark;
-}
-
-.linkedin {
-    background-color: $dark;
-}
-
-.resume {
+.github, .linkedin, .resume {
     background-color: $dark;
 }
 
@@ -120,6 +133,42 @@ $dark: #1E1E1E;
     justify-content: center;
     align-items: center;
 }
+
+// About section
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10vh 30vh 10vh 15vh;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-left: $dark 1px solid;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    font-size: 16px;
+    width: 45%;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh;
+    height: 30vh;
+    width: 30vh;
+    overflow: hidden;
+    border-radius: 100vh;
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 
 // Projects section
 
